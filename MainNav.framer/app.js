@@ -3,7 +3,8 @@ myLayers = Framer.Importer.load("imported/MainNav@1x")
 var scroll = new ScrollComponent({
 	width: 1200,
 	height: 400,
-	scrollHorizontal: false
+	scrollHorizontal: false,
+	mouseWheelEnabled: true
 });
 
 scroll.onScroll( function() {
@@ -72,7 +73,7 @@ var showLogo = function() {
 		properties: {
 			x: 10
 		},
-		time: .2
+		time: .07
 	});
 }
 
@@ -87,7 +88,7 @@ var hideSmallMenu = function() {
 		properties: {
 			y: -100
 		},
-		time: .2
+		time: .1
 	});
 }
 
@@ -96,7 +97,7 @@ var showSmallMenu = function() {
 		properties: {
 			y: scroll.scrollY
 		},
-		time: .2
+		time: .1
 	});
 }
 
@@ -119,7 +120,7 @@ var showSmallLogo = function() {
 		properties: {
 			y: scroll.scrollY
 		},
-		time: .3
+		time: .1
 	});
 }
 
@@ -144,7 +145,7 @@ var showMenuIcon = function() {
 			y: scroll.scrollY+10,
 			x: 1150
 		},
-		time: .2
+		time: .06
 	});
 }
 
@@ -181,6 +182,6 @@ var animateLink = function(layer, pos) {
 		properties: {
 			x: pos
 		},
-		time: .5
+		time: .09
 	})
 }
